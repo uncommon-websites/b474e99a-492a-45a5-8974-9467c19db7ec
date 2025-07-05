@@ -18,10 +18,10 @@
 <LogoScroller 
 	label="Trusted by leading research organizations"
 	logoUrls={[
-		'https://logo.clearbit.com/mit.edu',
-		'https://logo.clearbit.com/stanford.edu',
-		'https://logo.clearbit.com/pfizer.com',
-		'https://logo.clearbit.com/novartis.com'
+		'https://cdn.brandfetch.io/mit.edu/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7',
+		'https://cdn.brandfetch.io/stanford.edu/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7',
+		'https://cdn.brandfetch.io/pfizer.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7',
+		'https://cdn.brandfetch.io/novartis.com/w/400/h/400/logo?c=1id_elLz2Bd5Ej-dWo7'
 	]}
 />
 
