@@ -1,13 +1,13 @@
 @theme inline {
-	/* Theming */
-	--color-background: var(--color-white);
+	/* Theming - Anara Brand */
+	--color-background: #ffffff;
 	--color-foreground: var(--color-gray-950);
 
 	--color-card: var(--color-gray-50);
 	--color-card-foreground: var(--color-gray-950);
 	--color-card-hover: var(--color-gray-100);
 
-	--color-popover: var(--color-white);
+	--color-popover: #ffffff;
 	--color-popover-foreground: var(--color-gray-950);
 
 	--color-primary: var(--color-primary-600);
