@@ -1,17 +1,21 @@
 <!--
     @component
-    Sleek, minimal hero banner optimized for AI research company. Clean typography and focused messaging.
+    Bold hero banner with eye-catching text and strong call-to-action. NEVER use title case.
 
     Usage:
     ```html
     <Hero
-      title="AI built for research"
-      subtitle="Tools made for researchers, not just data"
+      title="Bold Claim"
+      subtitle="Quick Value"
       imageSrc="/hero.jpg"
       callsToAction={[
         {
           href: "/start",
-          label: "Get started"
+          label: "Go"
+        },
+        {
+          href: "/learn",
+          label: "More"
         }
       ]}
     />
@@ -26,6 +30,7 @@
 
 <script lang="ts">
 	// Components
+	import AnimateText from "$lib/components/animation/AnimateText.svelte";
 	import Button from "$lib/components/ui/Button.svelte";
 
 	// Constants
@@ -38,13 +43,14 @@
 
 	// Types
 	type Props = {
+		centered?: boolean;
 		title: string;
 		subtitle: string;
 		imageSrc?: string;
 		callsToAction?: Array<{
 			href: string;
 			label: string;
-		}>;
+		}>; // A maximum of two calls to action, with the first one being primary and the second one being secondary
 	};
 
 	let {
@@ -52,54 +58,68 @@
 		subtitle,
 		imageSrc,
 		callsToAction = [cta],
+		centered = false,
 		...rest
 	}: Props = $props();
 </script>
 
-<section class="bg-background" {...rest}>
-	<div class="section-px container mx-auto">
-		<!-- Hero Content -->
-		<div class="grid gap-12 py-20 lg:grid-cols-2 lg:items-center lg:gap-16">
-			<!-- Text Content -->
-			<div class="space-y-8">
-				<div class="space-y-4">
-					<h1 class="text-display text-balance leading-tight">
-						{title}
-					</h1>
-					<p class="text-headline text-muted-foreground max-w-[50ch]">
-						{subtitle}
-					</p>
-				</div>
-
-				{#if callsToAction.length > 0}
-					<div class="flex gap-4">
-						{#each callsToAction as cta, index}
-							<Button
-								href={cta.href}
-								size="lg"
-								variant={index % 2 === 0 ? "primary" : "secondary"}
-								class="transition-all duration-200 hover:scale-105"
-							>
-								{cta.label}
-							</Button>
-						{/each}
-					</div>
+<div class="bg-background" {...rest}>
+	<header
+		class={[
+			"section-px container mx-auto grid items-end gap-16 gap-y-9 py-12 pt-24 text-balance",
+			centered ? "place-items-center text-center" : " xl:grid-cols-[1fr_auto]"
+		]}
+		data-enter-container
+	>
+		<div class="grid gap-6" class:max-w-prose={centered}>
+			<h1 class="text-display w-full" data-enter>
+				<span class="block"><AnimateText text={title} /></span>
+				{#if !centered}
+					<span class="text-emphasis-dim block"><AnimateText text={subtitle} /></span>
 				{/if}
-			</div>
+			</h1>
 
-			<!-- Image -->
-			{#if imageSrc}
-				<div class="relative">
-					<div class="aspect-[4/3] overflow-hidden rounded-lg border border-border">
-						<img
-							src={imageSrc}
-							alt="Research team collaborating with AI tools"
-							class="size-full object-cover transition-transform duration-300 hover:scale-105"
-							onerror={handleImageError}
-						/>
-					</div>
-				</div>
+			{#if centered}
+				<p
+					data-enter
+					class={[
+						"text-muted-foreground text-headline mx-auto block max-w-[45ch] transition duration-500 ease-out"
+						// isTitleComplete ? "opacity-100" : "translate-y-2 opacity-0 blur-sm"
+					]}
+				>
+					{subtitle}
+				</p>
 			{/if}
 		</div>
-	</div>
-</section>
+
+		{#if callsToAction.length > 0}
+			<div class="flex gap-4" data-enter>
+				{#each callsToAction as cta, index}
+					<Button
+						href={cta.href}
+						size="lg"
+						variant={index % 2 === 0 ? "primary" : "secondary"}
+						class="max-lg:hidden">{cta.label}</Button
+					>
+					<Button
+						href={cta.href}
+						size="md"
+						variant={index % 2 === 0 ? "primary" : "secondary"}
+						class="lg:hidden">{cta.label}</Button
+					>
+				{/each}
+			</div>
+		{/if}
+	</header>
+
+	{#if imageSrc}
+		<div class="col-span-full aspect-video" data-enter>
+			<img
+				src={imageSrc}
+				alt="Customer"
+				class="size-full object-cover"
+				onerror={handleImageError}
+			/>
+		</div>
+	{/if}
+</div>
