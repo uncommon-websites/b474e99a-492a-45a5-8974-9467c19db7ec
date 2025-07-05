@@ -6,11 +6,11 @@
 	import CallToAction from "$lib/components/layout/CallToAction.svelte";
 	import AboutTeaser from "$lib/components/layout/AboutTeaser.svelte";
 	import LogoScroller from "$lib/components/layout/LogoScroller.svelte";
-	import CenteredTextOnlyHero from "$lib/components/layout/hero-sections/CenteredTextOnlyHero.svelte";
+	import Hero from "$lib/components/layout/hero-sections/Hero.svelte";
 	import UseCases from "$lib/components/layout/UseCases.svelte";
 </script>
 
-<CenteredTextOnlyHero
+<Hero
 	title="Research isn't the hard part"
 	subtitle="Focus on the thinking—let Anara handle the rest."
 	imageSrc="/generated/image-a-serene-coastal-landscape-at-dawn-with-.webp"
