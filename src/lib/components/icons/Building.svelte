@@ -1,0 +1,13 @@
+<svg
+	class="size-5"
+	fill="none"
+	stroke="currentColor"
+	viewBox="0 0 24 24"
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z" />
+	<path d="M6 12h4" />
+	<path d="M6 16h4" />
+	<path d="M16 12h2" />
+	<path d="M16 16h2" />
+</svg>

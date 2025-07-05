@@ -1,10 +1,4 @@
-<script lang="ts">
-	import type { HTMLAttributes } from "svelte/elements";
-	const props: HTMLAttributes<SVGSVGElement> = $props();
-</script>
-
-<svg viewBox="0 0 97 96" fill="none" xmlns="http://www.w3.org/2000/svg" class="" {...props}>
+<svg viewBox="0 0 97 96" fill="none" xmlns="http://www.w3.org/2000/svg" class="" >
 <path d="M33.6702 67.0833C52.227 67.0833 67.2702 52.0662 67.2702 33.5417C67.2702 15.0171 52.227 0 33.6702 0C15.1134 0 0.0701904 15.0171 0.0701904 33.5417C0.0701904 52.0662 15.1134 67.0833 33.6702 67.0833Z" fill="currentColor"/>
 <path d="M62.4702 95.8333C81.027 95.8333 96.0702 80.8162 96.0702 62.2917C96.0702 43.7671 81.027 28.75 62.4702 28.75C43.9135 28.75 28.8702 43.7671 28.8702 62.2917C28.8702 80.8162 43.9135 95.8333 62.4702 95.8333Z" fill="currentColor"/>
 </svg>
-

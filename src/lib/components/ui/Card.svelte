@@ -4,7 +4,7 @@
 	interface Props {
 		title?: string;
 		description?: string;
-		icon?: ComponentType;
+		icon?: any;
 		iconClass?: string;
 		imageSrc?: string;
 		imageAspect?: "16/9" | "9/16";

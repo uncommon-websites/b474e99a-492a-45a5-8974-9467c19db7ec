@@ -48,8 +48,8 @@
 			{#each logoUrls as logo}
 				<img
 					src={logo}
-					class="mx-8 h-5 w-fit object-contain opacity-70 saturate-0 dark:invert
-					"
+					alt="Company logo"
+					class="mx-8 h-5 w-fit object-contain opacity-70 saturate-0 dark:invert"
 				/>
 			{/each}
 		</Marquee>

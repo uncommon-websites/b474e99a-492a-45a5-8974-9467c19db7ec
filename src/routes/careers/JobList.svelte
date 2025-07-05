@@ -12,7 +12,7 @@
 	// Types
 
 	// Components
-	import IconArrowUpRight from "~icons/lucide/arrow-up-right";
+	import IconArrowUpRight from "$lib/components/icons/ArrowUpRight.svelte";
 
 	// Utils
 
@@ -57,7 +57,7 @@
 							<div
 								class="ml-auto grid size-6 h-full items-center self-stretch text-current opacity-20 group-hover:-translate-x-[var(--offset)] group-hover:opacity-50"
 							>
-								<IconArrowUpRight class="size-full" />
+								<IconArrowUpRight />
 							</div>
 						</a>
 					</li>

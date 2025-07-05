@@ -7,6 +7,7 @@
 	import AboutTeaser from "$lib/components/layout/AboutTeaser.svelte";
 	import LogoScroller from "$lib/components/layout/LogoScroller.svelte";
 	import CenteredTextOnlyHero from "$lib/components/layout/hero-sections/CenteredTextOnlyHero.svelte";
+	import UseCases from "$lib/components/layout/UseCases.svelte";
 </script>
 
 <CenteredTextOnlyHero
@@ -26,61 +27,105 @@
 
 <Summary
 	title="What we do"
-	text="Our technology delivers measurable results through secure, adaptable solutions that directly increase productivity and drive growth."
+	text="Anara develops AI solutions specifically designed to assist researchers across various fields. We help researchers leverage AI to enhance their work, letting them focus on the thinking while we handle the rest."
 />
 
 <Testimonials
 	testimonials={[
 		{
-			name: "Jane Smith",
-			position: "CTO",
-			company: "Tech Innovations",
+			name: "Dr. Cordelia Blackwood",
+			position: "Senior Research Scientist",
+			company: "Cambridge Biomedical Institute",
 			quote:
-				"Their cutting-edge automation boosted our productivity by 35%.\nThe intuitive interface reduced training time and improved team adoption.",
+				"Anara reduced our data analysis time from weeks to days. What used to take our team 3 weeks of manual processing now happens in 4 days.\nWe've accelerated our publication timeline by 40% while maintaining rigorous standards.",
 			image:
-				"https://images.unsplash.com/photo-1571513722275-4b41940f54b8?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+				"/generated/image-a-professional-female-researcher-in-a-mo.webp"
 		},
 		{
-			name: "John Doe",
-			position: "Director of Operations",
-			company: "Global Solutions",
+			name: "Dr. Thaddeus Voss",
+			position: "Principal Investigator",
+			company: "Max Planck Institute",
 			quote:
-				"Their robust security protocols gave us confidence in handling sensitive data.\nThe 24/7 support team resolved issues within hours, not days.",
+				"Before Anara, we lost $180,000 on a failed experiment due to overlooked literature. Their AI caught contradictory findings we missed.\nNow we validate our hypotheses against the entire research landscape before investing resources.",
 			image:
-				"https://images.unsplash.com/photo-1600603405959-6d623e92445c?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+				"/generated/image-a-male-scientist-working-diligently-in-a.webp"
 		},
 		{
-			name: "Sarah Johnson",
-			position: "Product Manager",
-			company: "Future Systems",
+			name: "Zara Okafor",
+			position: "PhD Candidate",
+			company: "University of Edinburgh",
 			quote:
-				"The scalable platform grew seamlessly with our business needs.\nTheir customization options allowed us to tailor solutions perfectly to our workflows.",
+				"Anara saved me $15,000 in research costs by identifying existing datasets that matched my needs perfectly.\nI avoided duplicating expensive experiments and finished my dissertation 6 months ahead of schedule.",
 			image:
-				"https://images.unsplash.com/photo-1531123897727-8f129e1688ce?q=80&w=3687&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+				"/generated/image-a-female-phd-student-in-a-university-res.webp"
 		}
 	]}
 />
 
 <Features
-	title="Features"
-	subtitle="Some features"
+	title="AI built for researchers"
+	subtitle="Anara helps researchers go further, faster—without the busywork"
 	features={[
 		{
-			title: "Streamlined Workflows",
-			description:
-				"Automate repetitive tasks and connect systems to improve productivity with our industry-leading 87% time savings."
+			title: "Do more in less time",
+			description: "Anara automates research tasks like literature reviews, data annotation, experiment tracking, and more. Spend less time managing, more time thinking."
 		},
 		{
-			title: "Data Analysis",
-			description:
-				"Extract meaningful insights from your data with powerful analytical tools backed by proprietary AI algorithms that are 3x more accurate than competitors."
+			title: "Your second brain for research",
+			description: "Upload papers, notes, and datasets. Anara extracts insights, builds connections, and even drafts hypothesis-driven reports based on your materials."
 		},
 		{
-			title: "Secure Collaboration",
-			description:
-				"Work together seamlessly while maintaining strict data privacy standards with our zero-knowledge architecture and military-grade encryption."
+			title: "Stay in your flow",
+			description: "Ask questions in plain language. Anara finds answers, traces sources, and shows its work."
+		},
+		{
+			title: "Works across domains",
+			description: "Whether you're in biology, social science, computer science or beyond—Anara is trained on interdisciplinary models built to support real academic research."
+		},
+		{
+			title: "Built by and for researchers",
+			description: "We're researchers too. We know what it's like to dig through text files at 2am."
+		},
+		{
+			title: "Ready to accelerate your work",
+			description: "Try Anara free—no setup, no fluff. Just faster, smarter research."
 		}
 	]}
 />
+
+<UseCases
+	title="Use cases"
+	subtitle="Real-world applications for research teams"
+	useCases={[
+		{
+			title: "Accelerate academic reviews",
+			description: "Cut hours off your literature review process by letting Anara summarize, extract, and link critical insights across hundreds of papers. Ideal for thesis work or grant prep.",
+			image: "/generated/image-a-diverse-group-of-academic-researchers-.webp",
+			link: {
+				href: "/use-cases/academic-reviews",
+				label: "Learn more"
+			}
+		},
+		{
+			title: "Improve clinical research speed and accuracy",
+			description: "In biomedical fields, Anara extracts peer-reviewed findings and tracks evolving hypotheses—reducing manual error and surfacing key data faster.",
+			image: "/generated/image-a-team-of-medical-researchers-in-a-clini.webp",
+			link: {
+				href: "/use-cases/clinical-research",
+				label: "Learn more"
+			}
+		},
+		{
+			title: "Streamline data-driven research",
+			description: "For data scientists and technical researchers, Anara interprets model documentation, automates technical summarization, and helps synthesize across datasets.",
+			image: "/generated/image-a-group-of-data-scientists-in-a-modern-o.webp",
+			link: {
+				href: "/use-cases/data-driven-research",
+				label: "Learn more"
+			}
+		}
+	]}
+/>
+
 <AboutTeaser />
 <CallToAction />

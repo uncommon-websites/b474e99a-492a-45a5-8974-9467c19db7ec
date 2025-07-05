@@ -10,10 +10,10 @@
 	import JobList, { type JobOpening } from "./JobList.svelte";
 
 	// Icons
-	import IconBriefcase from "~icons/lucide/briefcase";
-	import IconUsers from "~icons/lucide/users";
-	import IconHeart from "~icons/lucide/heart";
-	import IconGlobe from "~icons/lucide/globe";
+	import IconBriefcase from "$lib/components/icons/Briefcase.svelte";
+	import IconUsers from "$lib/components/icons/Users.svelte";
+	import IconHeart from "$lib/components/icons/Heart.svelte";
+	import IconGlobe from "$lib/components/icons/Globe.svelte";
 
 	// Constants
 	const SECTION_BASE_CLASSES = "section-py section-px container mx-auto";
@@ -24,96 +24,87 @@
 
 	const benefits = [
 		{
-			title: "Flexible Work",
-			description: "Remote-first with flexible hours that respect work-life balance.",
+			title: "Cutting-edge AI research",
+			description: "Work at the forefront of artificial intelligence, developing solutions that advance scientific discovery.",
 			icon: IconBriefcase
 		},
 		{
-			title: "Growth Opportunities",
-			description: "Continuous learning with mentorship and education stipends.",
-			icon: IconUsers
+			title: "Impact on research community",
+			description: "Build tools that directly empower researchers worldwide to accelerate their groundbreaking work.",
+			icon: IconGlobe
 		},
 		{
-			title: "Comprehensive Benefits",
-			description: "Health coverage, retirement plans, and generous paid time off.",
-			icon: IconHeart
+			title: "Continuous learning environment",
+			description: "Stay ahead of rapidly evolving AI technologies with dedicated learning time, conference attendance, and research collaboration.",
+			icon: IconUsers
 		}
 	];
 
 	const openings: JobOpening[] = [
-		// Engineering
+		// AI & Research
 		{
-			title: "Senior Frontend Developer",
+			title: "Senior AI Research Engineer",
+			department: "Research",
+			location: "Remote",
+			type: "Full-time",
+			url: "#"
+		},
+		{
+			title: "Machine Learning Engineer",
 			department: "Engineering",
 			location: "Remote",
 			type: "Full-time",
 			url: "#"
 		},
 		{
-			title: "Backend Engineer",
-			department: "Engineering",
+			title: "Research Scientist - NLP",
+			department: "Research",
 			location: "Remote",
 			type: "Full-time",
 			url: "#"
 		},
 		{
-			title: "Design Engineer",
+			title: "AI Platform Engineer",
 			department: "Engineering",
 			location: "Remote",
 			type: "Full-time",
 			url: "#"
 		},
 
-		// Design
+		// Product & Design
 		{
-			title: "UX/UI Designer",
+			title: "Research UX Designer",
 			department: "Design",
 			location: "Remote",
 			type: "Full-time",
 			url: "#"
 		},
 		{
-			title: "Product Designer",
-			department: "Design",
-			location: "Remote",
-			type: "Full-time",
-			url: "#"
-		},
-
-		// Product
-		{
-			title: "Product Manager",
-			department: "Product",
-			location: "Remote",
-			type: "Full-time",
-			url: "#"
-		},
-		{
-			title: "Product Analyst",
+			title: "AI Product Manager",
 			department: "Product",
 			location: "Remote",
 			type: "Full-time",
 			url: "#"
 		},
 
-		// Marketing
+		// Business & Partnerships
 		{
-			title: "Marketing Specialist",
-			department: "Marketing",
+			title: "Research Partnerships Manager",
+			department: "Business Development",
 			location: "Remote",
 			type: "Full-time",
 			url: "#"
 		},
 		{
-			title: "Content Strategist",
-			department: "Marketing",
+			title: "Academic Relations Coordinator",
+			department: "Business Development",
 			location: "Remote",
 			type: "Full-time",
 			url: "#"
 		},
 		{
-			title: "Social Media Manager",
-			department: "Marketing",
+			title: "Technical Writer - AI Documentation",
+			department: "Content",
 			location: "Remote",
 			type: "Full-time",
 			url: "#"
@@ -122,31 +113,31 @@
 
 	const employeeTestimonials = [
 		{
-			name: "Michael Chen",
-			position: "Senior Developer",
-			company: "Engineering Team",
+			name: "Dr. Priya Sharma",
+			position: "Senior Research Scientist",
+			company: "Core AI Team",
 			quote:
-				"Working here has given me the opportunity to tackle challenging problems while maintaining a healthy work-life balance. The team culture is supportive and collaborative.",
+				"I've grown more here in six months than I did in two years at my last lab. Working on tools that I actually would've wanted during my PhD is incredibly fulfilling.",
 			image:
-				"https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+				"/generated/image-a-professional-portrait-of-an-indian-wom.webp"
 		},
 		{
-			name: "Priya Sharma",
-			position: "Product Designer",
-			company: "Design Team",
+			name: "Alex Johnson",
+			position: "Machine Learning Engineer",
+			company: "Infrastructure and Data",
 			quote:
-				"The creative freedom and opportunity to influence product decisions makes this the best place I've ever worked. I'm constantly learning and growing.",
+				"Everyone here cares deeply about the scientific process, not just the tech. We're solving real research problems—not chasing hype. That's why I joined and why I'm staying.",
 			image:
-				"https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+				"/generated/image-a-professional-portrait-of-a-young-black.webp"
 		},
 		{
-			name: "Marcus Johnson",
-			position: "Marketing Lead",
-			company: "Marketing Team",
+			name: "Maria Santos",
+			position: "Product Manager",
+			company: "Research Tools",
 			quote:
-				"I joined three years ago and have grown tremendously. The leadership truly invests in your development and the work environment is both challenging and supportive.",
+				"It's rare to ship AI-enabled features for actual researchers and see them used a week later by a university immunology team. That kind of impact doesn't get old.",
 			image:
-				"https://images.unsplash.com/photo-1531384441138-2736e62e0919?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+				"/generated/image-a-professional-portrait-of-a-latina-woma.webp"
 		}
 	];
 
@@ -155,35 +146,40 @@
 			step: 1,
 			title: "Apply",
 			description:
-				"Submit your application through our careers portal with your resume and portfolio."
+				"Submit your application with your resume, portfolio, and any relevant research papers or AI projects you've worked on."
 		},
 		{
 			step: 2,
-			title: "Interview",
-			description: "Meet with our team to discuss your experience, skills, and career aspirations."
+			title: "Technical assessment",
+			description: "Participate in a technical discussion about AI concepts and collaborate on a small research problem with our team."
 		},
 		{
 			step: 3,
+			title: "Cultural fit & vision",
+			description: "Meet with team members to discuss your passion for research impact and alignment with our mission."
+		},
+		{
+			step: 4,
 			title: "Welcome aboard",
-			description: "Join our team and start your journey building the future with us."
+			description: "Join our research-focused team and start contributing to AI solutions that advance scientific discovery."
 		}
 	];
 
 	const values = [
 		{
 			icon: IconHeart,
-			title: "Passion",
-			description: "We're driven by a shared passion for innovation and excellence."
+			title: "Research-driven innovation",
+			description: "We're passionate about pushing the boundaries of what's possible with AI to solve real research challenges."
 		},
 		{
 			icon: IconUsers,
-			title: "Collaboration",
-			description: "We believe in teamwork and collaboration to achieve great things."
+			title: "Scientific collaboration",
+			description: "We work closely with researchers across disciplines, fostering an environment of shared knowledge and discovery."
 		},
 		{
 			icon: IconGlobe,
-			title: "Global Impact",
-			description: "We're committed to making a positive impact on the world."
+			title: "Accelerating discovery",
+			description: "Our mission is to democratize AI tools, enabling researchers worldwide to make breakthrough discoveries faster."
 		}
 	];
 </script>
@@ -191,14 +187,13 @@
 <!-- Hero Section -->
 
 <SecondaryHero
-	generating
-	title="Join our team of innovators"
-	subtitle="We're looking for passionate people to help us build the future of digital experiences. Discover your next opportunity with us."
-	imageSrc="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80"
+	title="Shape the future of AI for researchers"
+	subtitle="Join a passionate team building cutting-edge AI solutions that empower researchers worldwide. Be part of something that advances human knowledge and discovery."
+	imageSrc="/generated/image-a-diverse-team-of-researchers-gathered-a.webp"
 />
 
 <!-- Why Join Us Section -->
-<section class={SECTION_BASE_CLASSES} generating>
+<section class={SECTION_BASE_CLASSES}>
 	<SectionHeader title="Why join us?" subtitle="Build your career while making an impact" />
 
 	<div class="mt-16 grid gap-4 md:grid-cols-3">
@@ -209,16 +204,16 @@
 </section>
 
 <!-- Culture Section -->
-<Culture {values} generating />
+<Culture {values} />
 
-<Testimonials testimonials={employeeTestimonials} generating />
+<Testimonials testimonials={employeeTestimonials} />
 
 <!-- Application Process -->
-<section class={SECTION_BASE_CLASSES} generating>
+<section class={SECTION_BASE_CLASSES}>
 	<div class="mx-auto">
 		<h2 class="text-title1 mb-16">Our application process</h2>
 
-		<div class="grid gap-12 md:grid-cols-3">
+		<div class="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
 			{#each processSteps as { step, title, description }, i}
 				<div class="flex flex-col">
 					<div class="{ICON_CONTAINER_CLASSES} mb-6 size-11">
@@ -232,7 +227,7 @@
 	</div>
 </section>
 <!-- Current Openings Section -->
-<section class={GRADIENT_BG_CLASSES} generating>
+<section class={GRADIENT_BG_CLASSES}>
 	<div class="section-px section-py container mx-auto grid w-full items-start lg:grid-cols-2">
 		<SectionHeader title="Current openings" subtitle="Find your perfect role" />
 

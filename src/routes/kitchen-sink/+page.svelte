@@ -4,11 +4,11 @@
 	import Features from "$lib/components/layout/Features.svelte";
 
 	// Icons
-	import IconZap from "~icons/lucide/zap";
-	import IconShield from "~icons/lucide/shield";
-	import IconUsers from "~icons/lucide/users";
-	import IconSettings from "~icons/lucide/settings";
-	import IconPalette from "~icons/lucide/palette";
+	import IconZap from "$lib/components/icons/Zap.svelte";
+	import IconShield from "$lib/components/icons/Shield.svelte";
+	import IconUsers from "$lib/components/icons/Users.svelte";
+	import IconSettings from "$lib/components/icons/Settings.svelte";
+	import IconPalette from "$lib/components/icons/Palette.svelte";
 
 	// Theme controls
 	let themeRadius = $state(8); // 0.5rem = 8px
@@ -51,8 +51,9 @@
 
 				<!-- Radius Control -->
 				<div class="space-y-2">
-					<label class="text-sm font-medium">Border Radius: {themeRadius}px</label>
+					<label for="radius-control" class="text-sm font-medium">Border Radius: {themeRadius}px</label>
 					<input
+						id="radius-control"
 						type="range"
 						min="0"
 						max="24"
@@ -63,8 +64,9 @@
 
 				<!-- Primary Color Hue -->
 				<div class="space-y-2">
-					<label class="text-sm font-medium">Primary Hue: {primaryHue}°</label>
+					<label for="hue-control" class="text-sm font-medium">Primary Hue: {primaryHue}°</label>
 					<input
+						id="hue-control"
 						type="range"
 						min="0"
 						max="360"
@@ -75,8 +77,9 @@
 
 				<!-- Background Shade -->
 				<div class="space-y-2">
-					<label class="text-sm font-medium">Background: Gray-{backgroundShade}</label>
+					<label for="background-control" class="text-sm font-medium">Background: Gray-{backgroundShade}</label>
 					<select
+						id="background-control"
 						bind:value={backgroundShade}
 						class="border-border bg-background text-foreground w-full rounded border p-2"
 					>

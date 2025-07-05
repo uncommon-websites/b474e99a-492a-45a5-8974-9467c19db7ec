@@ -4,8 +4,8 @@
 
 	// Components
 	import Button from "$lib/components/ui/Button.svelte";
-	import IconMenu from "~icons/lucide/menu";
-	import IconChevronRight from "~icons/lucide/chevron-right";
+	import IconMenu from "$lib/components/icons/Menu.svelte";
+	import IconChevronRight from "$lib/components/icons/ChevronRight.svelte";
 
 	// Utils
 	import { cta, navigation } from "$lib/navigation";
@@ -125,7 +125,6 @@
 		size="lg"
 		variant="ghost"
 		hideLabel
-		suffix={IconMenu}
 		iconOnly
 		class="z-50 max-h-full"
 		onclick={() => (isMenuOpen = !isMenuOpen)}>Menu</Button
@@ -138,7 +137,7 @@
 			<summary
 				class="section-px nav-item text-title2 text-foreground hover:bg-muted flex cursor-pointer list-none items-center justify-between transition-all select-none group-open:font-medium"
 				>{item.label}
-				<IconChevronRight class="transition duration-300 ease-out group-open:rotate-90" /></summary
+				<IconChevronRight /></summary
 			>
 
 			<ul

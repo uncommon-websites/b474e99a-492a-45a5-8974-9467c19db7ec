@@ -21,10 +21,9 @@ A minimalist teaser for the about page.
 
 	// Data
 	const teamMember: TeamMember = {
-		name: "Alex Morgan",
-		role: "Founder & CEO",
-		image:
-			"https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80"
+		name: "Naveed",
+		role: "Founder",
+		image: "/generated/image-a-professional-male-researcher-wearing-a.webp"
 	};
 </script>
 
@@ -33,7 +32,7 @@ A minimalist teaser for the about page.
 		<div class="relative mx-auto grid max-w-2xl place-items-center gap-16">
 			<ScrollText
 				class="text-title1 text-center"
-				text={`"We're building the future of digital experiences, crafting innovative solutions that transform how people interact with technology in their everyday lives"`}
+				text={`"Anara started as a tool to help me get through my own PhD. It quickly became something others needed too."`}
 			/>
 
 			<!-- Team Member & CTA Section -->
@@ -46,7 +45,7 @@ A minimalist teaser for the about page.
 					/>
 					<div>
 						<div class="text-callout">{teamMember.name}</div>
-						<div class="text-caption text-emphasis-low">{teamMember.role}</div>
+						<div class="text-caption text-muted-foreground">{teamMember.role}</div>
 					</div>
 					<Button href="/about" variant="secondary" size="sm" class="ml-8">Read more</Button>
 				</div>

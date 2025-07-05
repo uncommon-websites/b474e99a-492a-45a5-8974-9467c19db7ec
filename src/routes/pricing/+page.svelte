@@ -17,33 +17,47 @@
 <Testimonials
 	testimonials={[
 		{
-			name: "Jane Smith",
-			position: "CTO",
-			company: "Tech Innovations",
+			name: "Dr. Lena Aboudine",
+			position: "Clinical Research Lead",
+			company: "Carysis Labs",
 			quote:
-				"This solution transformed our workflow and increased productivity by 35% in just two months.",
-			image:
-				"https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+				"With Anara, I'm able to extract the core ideas from technical papers in minutes instead of hours. It's become essential to how I work.",
+			image: "/generated/image-a-professional-headshot-of-dr-lena-aboud.webp"
 		},
 		{
-			name: "John Doe",
-			position: "Director of Operations",
-			company: "Global Solutions",
+			name: "Marcel Grohn",
+			position: "Applied Policy Researcher",
+			company: "Praxis Insights",
 			quote:
-				"The implementation was seamless and the support team was exceptional throughout the process.",
-			image:
-				"https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80"
+				"It's like getting a second-brain that understands academic reasoning. I don't write anything serious without it now.",
+			image: "/generated/image-a-professional-headshot-of-marcel-grohn-.webp"
 		},
 		{
-			name: "Sarah Johnson",
-			position: "Product Manager",
-			company: "Future Systems",
+			name: "Serena Chong",
+			position: "PhD Candidate",
+			company: "University of Edinburgh",
 			quote:
-				"We've tried multiple solutions, but this is the only one that perfectly addressed all our requirements.",
-			image:
-				"https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&estimonial-3.jpg"
+				"Anara handles the tedious context-switching in my literature reviews so I can stay focused on discovery and synthesis.",
+			image: "/generated/image-a-professional-headshot-of-serena-chong-.webp"
 		}
 	]}
 />
 
-<CallToAction />
+<CallToAction 
+	title="Ready in minutes"
+	subtitle="Get started now"
+	description="Your time is better spent thinking than typing. Start using Anara instantly—no setup, no integration, no tutorials needed. See what purpose-built AI for researchers can do for you today."
+	imageSrc="/generated/image-a-joyful-researcher-sitting-at-a-desk-su.webp"
+	callsToAction={[
+		{
+			href: "/signup",
+			label: "Start free trial",
+			variant: "primary"
+		},
+		{
+			href: "/demo",
+			label: "Book a demo",
+			variant: "secondary"
+		}
+	]}
+/>

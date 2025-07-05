@@ -50,10 +50,10 @@
 
 	// Props
 	const {
-		title = "Get started today",
-		subtitle = "Join now",
-		description = "Ready to experience the difference? Join our community of satisfied customers and see how our solution can transform your workflow. ",
-		imageSrc = "https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1200&q=80",
+		title = "Ready to accelerate your research",
+		subtitle = "Start your free trial today",
+		description = "Join researchers across the world who are already using Anara to spend less time managing and more time discovering. No setup required—start enhancing your research workflow in minutes.",
+		imageSrc = "/generated/image-a-cheerful-researcher-with-a-warm-smile-.webp",
 		callsToAction = [cta],
 		...rest
 	}: {

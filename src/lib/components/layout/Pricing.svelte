@@ -28,123 +28,149 @@ Please update features according to the company's product offering. Do not remov
 	// Components
 	import Button from "$lib/components/ui/Button.svelte";
 	import SectionHeader from "./SectionHeader.svelte";
-	import IconCheck from "~icons/lucide/check";
-	import IconX from "~icons/lucide/x";
+	import IconCheck from "$lib/components/icons/Check.svelte";
+	import IconX from "$lib/components/icons/X.svelte";
 	import NumberFlow from "@number-flow/svelte";
 	import LogoScroller from "./LogoScroller.svelte";
 
 	// Props
 	const {
-		title = "Simple, transparent pricing",
-		subtitle = "Choose the plan that works best for your needs",
-		tierNames = ["Starter", "Pro", "Enterprise"],
+		title = "Pricing for AI research solutions",
+		subtitle = "Choose the plan that accelerates your research",
+		tierNames = ["Academic", "Team", "Enterprise"],
 		features = [
 			{
-				name: "Projects",
+				name: "Research projects",
 				tiers: {
-					Starter: "5",
-					Pro: "Unlimited",
+					Academic: "3",
+					Team: "Unlimited",
 					Enterprise: "Unlimited"
 				}
 			},
 			{
 				name: "Team members",
 				tiers: {
-					Starter: "1",
-					Pro: "10",
+					Academic: "1",
+					Team: "15",
 					Enterprise: "Unlimited"
 				}
 			},
 			{
-				name: "Storage",
+				name: "Data processing",
 				tiers: {
-					Starter: "1GB",
-					Pro: "10GB",
+					Academic: "10GB/month",
+					Team: "100GB/month",
 					Enterprise: "Unlimited"
 				}
 			},
 			{
-				name: "API access",
+				name: "AI model access",
 				tiers: {
-					Starter: false,
-					Pro: true,
+					Academic: "Basic models",
+					Team: "Advanced models",
+					Enterprise: "Custom models"
+				}
+			},
+			{
+				name: "API integrations",
+				tiers: {
+					Academic: false,
+					Team: true,
 					Enterprise: true
 				}
 			},
 			{
-				name: "Custom domains",
+				name: "Research analytics",
 				tiers: {
-					Starter: false,
-					Pro: true,
-					Enterprise: true
-				}
-			},
-			{
-				name: "Analytics",
-				tiers: {
-					Starter: "Basic",
-					Pro: "Advanced",
-					Enterprise: "Advanced"
+					Academic: "Basic",
+					Team: "Advanced",
+					Enterprise: "Advanced + Custom"
 				}
 			},
 			{
 				name: "Support response time",
 				tiers: {
-					Starter: "24 hours",
-					Pro: "4 hours",
-					Enterprise: "1 hour"
+					Academic: "48 hours",
+					Team: "8 hours",
+					Enterprise: "2 hours"
 				}
 			},
 			{
-				name: "Dedicated account manager",
+				name: "Literature discovery",
 				tiers: {
-					Starter: false,
-					Pro: false,
+					Academic: "1,000 papers/month",
+					Team: "10,000 papers/month",
+					Enterprise: "Unlimited"
+				}
+			},
+			{
+				name: "Collaboration tools",
+				tiers: {
+					Academic: false,
+					Team: true,
 					Enterprise: true
 				}
 			},
 			{
-				name: "SLA",
+				name: "Custom workflows",
 				tiers: {
-					Starter: false,
-					Pro: false,
-					Enterprise: "99.9%"
+					Academic: false,
+					Team: false,
+					Enterprise: true
+				}
+			},
+			{
+				name: "Dedicated research advisor",
+				tiers: {
+					Academic: false,
+					Team: false,
+					Enterprise: true
+				}
+			},
+			{
+				name: "Institution-wide licensing",
+				tiers: {
+					Academic: false,
+					Team: false,
+					Enterprise: true
 				}
 			}
 		],
 		tiers = [
 			{
-				name: "Starter",
-				monthlyPrice: 9.99,
-				yearlyPrice: 7.99, // 20% savings
-				description: "Perfect for individuals and small projects",
+				name: "Academic",
+				monthlyPrice: 19,
+				yearlyPrice: 15, // 20% savings
+				description: "Perfect for individual researchers and students",
 				features: [
-					"Up to 5 projects",
-					"Basic analytics",
-					"24-hour support response time",
-					"1GB storage"
+					"Up to 3 research projects",
+					"Basic AI models",
+					"10GB data processing/month",
+					"1,000 literature papers/month",
+					"Community support"
 				],
 				cta: {
-					label: "Get started",
-					href: "/signup?plan=starter"
+					label: "Start research",
+					href: "/signup?plan=academic"
 				}
 			},
 			{
-				name: "Pro",
-				monthlyPrice: 29.99,
-				yearlyPrice: 23.99, // 20% savings
-				description: "For growing teams and businesses",
+				name: "Team",
+				monthlyPrice: 89,
+				yearlyPrice: 71, // 20% savings
+				description: "For research teams and small labs",
 				features: [
-					"Unlimited projects",
-					"Advanced analytics",
-					"4-hour support response time",
-					"10GB storage",
-					"Custom domains",
-					"Team collaboration tools"
+					"Unlimited research projects",
+					"Advanced AI models",
+					"100GB data processing/month",
+					"10,000 literature papers/month",
+					"Team collaboration tools",
+					"API integrations",
+					"Priority support"
 				],
 				cta: {
-					label: "Get started",
-					href: "/signup?plan=pro"
+					label: "Start collaboration",
+					href: "/signup?plan=team"
 				},
 				highlight: true
 			},
@@ -152,15 +178,16 @@ Please update features according to the company's product offering. Do not remov
 				name: "Enterprise",
 				monthlyPrice: null,
 				yearlyPrice: null,
-				description: "For large organizations with specific needs",
+				description: "For universities and large research institutions",
 				features: [
-					"Everything in Pro",
-					"Dedicated account manager",
-					"1-hour support response time",
-					"Unlimited storage",
-					"Advanced security features",
-					"Custom integrations",
-					"99.9% uptime SLA"
+					"Everything in Team",
+					"Custom AI models",
+					"Unlimited data processing",
+					"Dedicated research advisor",
+					"Institution-wide licensing",
+					"Custom workflows",
+					"Advanced compliance features",
+					"Priority support (2-hour response)"
 				],
 				cta: {
 					label: "Contact sales",
@@ -239,7 +266,7 @@ Please update features according to the company's product offering. Do not remov
 					<ul class="space-y-3">
 						{#each tier.features as feature}
 							<li class="flex items-center gap-2">
-								<IconCheck class="text-primary-600 dark:text-primary-400 size-5 flex-shrink-0" />
+								<IconCheck />
 								<span class="text-body text-emphasis-medium dark:text-gray-300">{feature}</span>
 							</li>
 						{/each}
@@ -337,9 +364,9 @@ Please update features according to the company's product offering. Do not remov
 									<td class="py-3">
 										{#if typeof feature.tiers[tierName] === "boolean"}
 											{#if feature.tiers[tierName]}
-												<IconCheck class="text-primary-900 dark:text-primary-400 size-5" />
+												<IconCheck />
 											{:else}
-												<IconX class="size-5 text-gray-400" />
+												<IconX />
 											{/if}
 										{:else}
 											<span class="text-callout font-medium text-gray-700 dark:text-gray-300">
