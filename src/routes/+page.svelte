@@ -6,25 +6,30 @@
 	import CallToAction from "$lib/components/layout/CallToAction.svelte";
 	import AboutTeaser from "$lib/components/layout/AboutTeaser.svelte";
 	import LogoScroller from "$lib/components/layout/LogoScroller.svelte";
-	import Hero from "$lib/components/layout/hero-sections/Hero.svelte";
+	import CenteredTextOnlyHero from "$lib/components/layout/hero-sections/CenteredTextOnlyHero.svelte";
 </script>
 
-<Hero
-	title="Elevate your business with thoughtful design"
-	subtitle="Solutions that enhance user experience, and improve visual communication."
-	imageSrc="/sample.png"
-	generating
+<CenteredTextOnlyHero
+	title="Research isn't the hard part"
+	subtitle="Focus on the thinking—let Anara handle the rest."
+	imageSrc="/generated/image-a-serene-coastal-landscape-at-dawn-with-.webp"
 />
-<LogoScroller label="" generating />
+<LogoScroller 
+	label="Trusted by leading research organizations"
+	logoUrls={[
+		'https://logo.clearbit.com/mit.edu',
+		'https://logo.clearbit.com/stanford.edu',
+		'https://logo.clearbit.com/pfizer.com',
+		'https://logo.clearbit.com/novartis.com'
+	]}
+/>
 
 <Summary
-	generating
 	title="What we do"
 	text="Our technology delivers measurable results through secure, adaptable solutions that directly increase productivity and drive growth."
 />
 
 <Testimonials
-	generating
 	testimonials={[
 		{
 			name: "Jane Smith",
@@ -57,7 +62,6 @@
 />
 
 <Features
-	generating
 	title="Features"
 	subtitle="Some features"
 	features={[
@@ -78,5 +82,5 @@
 		}
 	]}
 />
-<AboutTeaser generating />
-<CallToAction generating />
+<AboutTeaser />
+<CallToAction />
