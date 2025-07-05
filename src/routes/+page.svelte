@@ -12,8 +12,8 @@
 
 <Hero
 	title="Research isn't the hard part"
-	subtitle="Focus on the thinking—let Anara handle the rest."
-	imageSrc="/generated/image-a-serene-coastal-landscape-at-dawn-with-.webp"
+	subtitle="Focus on the thinking, let Anara handle the rest."
+	imageSrc="/generated/image-a-group-of-researchers-are-working-toget.webp"
 />
 <LogoScroller 
 	label="Trusted by leading research organizations"
